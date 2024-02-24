@@ -23,7 +23,7 @@ app.use('/answer', answerRoutes)
 
 const PORT = process.env.PORT || 5000
 
-const DATABASE_URL = process.env.CONNECTION_URL
+const DATABASE_URL = "mongodb+srv://admin:admin@stack-overflow-clone.bqe7gw9.mongodb.net/?retryWrites=true&w=majority&appName=stack-overflow-clone"
 
 mongoose.connect(DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
      .then(() => app.listen(PORT, () => {console.log(`server running on port ${PORT}`)}))
